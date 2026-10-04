@@ -21,10 +21,8 @@ export function MobileCallBar() {
   return (
     <a
       href={site.phoneHref}
-      aria-hidden={!visible}
-      tabIndex={visible ? 0 : -1}
-      className={`btn btn-primary fixed inset-x-3 bottom-3 z-60 rounded-[14px] p-4 text-[1.1rem] transition-transform duration-250 sm:hidden ${
-        visible ? "translate-y-0" : "translate-y-[140%]"
+      className={`btn btn-primary fixed inset-x-3 bottom-3 z-60 rounded-[14px] p-4 text-[1.1rem] transition-[transform,visibility] duration-250 sm:hidden ${
+        visible ? "visible translate-y-0" : "invisible translate-y-[140%]"
       }`}
     >
       <Phone className="size-5" fill="currentColor" strokeWidth={0} aria-hidden />
